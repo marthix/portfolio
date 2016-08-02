@@ -17,10 +17,12 @@ channel.bind('new_photo', function(data) {
 
 fetch(api)
   .then(function(data) {
+    console.log(data)
     return data.json()
   })
   .then(function(photos) {
     // Put your code here to render existing photos
+    console.log(photos)
     photos.forEach(function(photo){
       renderPhoto(photo)
     })
@@ -78,8 +80,7 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true,
-                    fixedStepSize: 1
+                    beginAtZero: true
                 }
             }]
         },

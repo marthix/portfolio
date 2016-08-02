@@ -1,7 +1,7 @@
 var pusher,
     channel,
     apiToken = '0f97ee0eb0dba4f1d8fb',
-    api = 'https://775fbd34.ngrok.io/posts'
+    api = 'https://salty-temple-56361.herokuapp.com/posts'
 
 // Pusher connection
 pusher = new Pusher(apiToken, {
@@ -78,7 +78,8 @@ var myChart = new Chart(ctx, {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    beginAtZero: true,
+                    fixedStepSize: 1
                 }
             }]
         },

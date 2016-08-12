@@ -1,0 +1,24 @@
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+.footer-distributed {
+  color: #e6e6e6;
+  font: bold 16px "Quicksand", sans-serif;
+  padding-bottom: 20px;
+}
+
+.footer-distributed h3 {
+  color: #e6e6e6;
+  font: normal 22px "Quicksand", sans-serif;
+}
+
+.footer-company-name {
+  background-color: #01253d;
+}
+
+.footer-company-name .footer-logo {
+  width: 300px;
+  padding: 10px;
+  margin-top: 30px;
+}

@@ -1,0 +1,266 @@
+// COLORS
+$blue:          #02426c;
+$darkBlue:      #01253d;
+$red:           #d54738;
+$white:         #fafafa;
+$gray:          #e6e6e6;
+$darkgray:      #414141;
+$black:         #131313;
+
+// FONT
+$mainFont:      'Quicksand', sans-serif;
+$headerFont:    'Pacifico', cursive;
+
+//modal//
+
+.sockName {
+    font-family: $headerFont;
+    color: $red;
+}
+
+.sockDescription {
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.stock {
+    color: $red;
+}
+
+.modal-footer {
+    button {
+        width: 100px;
+    }
+}
+
+.rightSideDescBtn {
+    margin-top: 20px;
+}
+.sizeButton {
+    background-color: transparent;
+    border: 2px solid $blue;
+    color: $blue;
+    font-weight: bold;
+    padding: 3px 10px;
+    transition: 0.3s ease all;
+
+    &:hover {
+      background-color: rgba(2, 66, 108, 0.2);
+    }
+}
+
+.qty-btn,
+.btn-send {
+    background-color: transparent;
+    border: 2px solid $blue;
+    color: $blue;
+    font-weight: bold;
+    padding: 3px 10px;
+    transition: 0.3s ease all;
+
+    &:hover {
+      background-color: rgba(2, 66, 108, 0.2);
+    }
+}
+
+.btn-add-cart {
+  background-color: transparent;
+  border: 2px solid $red;
+  color: $red;
+  font-weight: bold;
+  padding: 3px 10px;
+  transition: 0.3s ease all;
+
+  &:hover {
+    background-color: rgba(213, 71, 56, 0.2);
+  }
+}
+
+.btn-send {
+    background-color: transparent;
+    border: 2px solid $blue;
+    color: $blue;
+    font-weight: bold;
+    padding: 3px 10px;
+    transition: 0.3s ease all;
+
+    &:hover {
+      background-color: rgba(2, 66, 108, 0.2);
+      color: $white;
+    }
+  }
+
+.img-rounded {
+  width: 50px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $mainFont;
+}
+
+body {
+  background-color: $gray;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.flip {
+  transform: scaleY(-1);
+}
+
+.filter-box {
+  border-bottom: 2px solid $darkBlue;
+  margin: auto;
+  width: 85%;
+}
+
+.filters {
+  margin: 20px 50px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  width: 70%;
+  display: inline-block;
+}
+
+.filters-arrow {
+  font-size: 30px;
+  display: inline-block;
+  transition: 0.3s ease all;
+}
+
+.sort {
+  height: 30px;
+}
+
+.merch-grid {
+  margin: 50px 0;
+}
+
+.merch {
+  padding: 0px;
+  transition: 0.3s ease all;
+  overflow: hidden;
+  height: 25vw;
+
+  &:hover {
+    box-shadow: 0px 0px 30px $darkBlue;
+    transform: scale(1.01);
+    z-index: 1;
+  }
+}
+
+.merch-img {
+  width: 100%;
+}
+
+.merch-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 0;
+  text-align: center;
+  top: -260px;
+  position: relative;
+  width: 100%;
+  transition: 0.3s ease all;
+}
+
+.merch-category {
+  color: $darkgray;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 15px 0;
+  display: block;
+}
+
+.merch-name {
+  color: $blue;
+  font-family: $headerFont;
+  font-size: 28px;
+  margin: 0px;
+  display: block;
+}
+
+.merch-price {
+  color: $darkgray;
+  font-size: 16px;
+  margin: 10px 0;
+  display: block;
+}
+
+.btn-quick-add {
+  background-color: transparent;
+  border: 2px solid $red;
+  color: $red;
+  font-weight: bold;
+  padding: 3px 10px;
+  transition: 0.3s ease all;
+  margin: 2px;
+
+  &:hover {
+    background-color: rgba(213, 71, 56, 0.2);
+  }
+}
+
+.btn-details {
+  background-color: transparent;
+  border: 2px solid $blue;
+  color: $blue;
+  font-weight: bold;
+  padding: 3px 10px;
+  transition: 0.3s ease all;
+  margin: 2px;
+
+  &:hover {
+    background-color: rgba(2, 66, 108, 0.2);
+  }
+}
+
+#myform {
+    margin: 5px;
+}
+
+.qty {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid $blue;
+  background-color: rgba(2, 66, 108, 0.2);
+}
+
+.dropDownButton {
+    height: 30px;
+}
+input.qtyplus,
+input.qtyminus {
+  width: 25px;
+  height: 30px;
+  border: 2px solid $blue;
+  background: $white;
+  padding: 0;
+}
+
+.checkout-form {
+  margin-bottom: 20px;
+}
+
+.city {
+  width: 75%;
+  display: inline-block;
+}
+
+.state {
+  width: 23%;
+  display: inline-block;
+}
+
+.zip {
+  width: 33%;
+  display: inline-block;
+}
+
+.country {
+  width: 65%;
+  display: inline-block;
+}

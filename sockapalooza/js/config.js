@@ -1,6 +1,6 @@
 // API Host
-// var api = 'https://powerful-coast-15525.herokuapp.com/'
-var api = 'http://1fb503fe.ngrok.io'
+var api = 'https://powerful-coast-15525.herokuapp.com/'
+// var api = 'http://1fb503fe.ngrok.io'
 
 // Utilities
 function fetchApi(method, endpoint, formFields, callback) {

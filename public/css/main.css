@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EFF2ED;
+  color: #343431;
+  font-family: "Ubuntu", sans-serif;
+}
+
+header {
+  background-color: #343431;
+  color: #EFF2ED;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #FCFC62;
+  text-decoration: none;
+}
+
+.logo {
+  margin: 12px;
+  width: 70px;
+  height: 100px;
+  float: left;
+  display: inline-block;
+  background-color: #FCFC62;
+  -webkit-mask: url(/images/logo.svg);
+  mask: url(/images/logo.svg);
+  transition-duration: 0.5s;
+}
+
+.nav-container {
+  background-color: #343431;
+  color: #FCFC62;
+  transition-duration: 1s;
+}
+
+.navbar-fixed-top {
+  height: 70px;
+}
+
+nav {
+  max-width: 900px;
+  margin: auto;
+  text-align: right;
+}
+
+nav ul {
+  padding: 25px;
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li a {
+  color: #FCFC62;
+}
+
+nav li a::before, nav li a::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+nav li a::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+nav li a::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.vector-me {
+  float: right;
+  height: 400px;
+  width: 116px;
+  background-color: #4e4e4a;
+  -webkit-mask: url(/images/man.svg);
+  mask: url(/images/man.svg);
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 70px auto;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-family: "Abel", sans-serif;
+  font-size: 80px;
+  margin-bottom: -5px;
+  margin-top: 40px;
+  text-shadow: 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content span {
+  color: #FCFC62;
+}
+
+.header-content em {
+  font-weight: 400;
+  font-size: 14px;
+  color: #5b5b56;
+}
+
+.header-content p {
+  text-align: left;
+  line-height: 1.6;
+  margin-right: 130px;
+  padding: 60px 0 100px 110px;
+}
+
+main {
+  margin-top: 80px;
+}
+
+main h1 {
+  color: #FCFC62;
+  background-color: #343431;
+  display: inline-block;
+  padding: 10px;
+}
+
+.about {
+  background-color: #343431;
+}
+
+.headshot {
+  border-radius: 100%;
+  max-width: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

@@ -13,6 +13,10 @@ header {
   color: #EFF2ED;
 }
 
+img {
+  width: 100%;
+}
+
 a:hover,
 a:active,
 a:focus {
@@ -27,8 +31,8 @@ a:focus {
   float: left;
   display: inline-block;
   background-color: #FCFC62;
-  -webkit-mask: url(/images/logo.svg);
-  mask: url(/images/logo.svg);
+  -webkit-mask: url(../images/logo.svg);
+  mask: url(../images/logo.svg);
   transition-duration: 0.5s;
 }
 
@@ -92,13 +96,17 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
   transform: translateX(0px);
 }
 
+.vector-box {
+  max-height: 250px;
+}
+
 .vector-me {
-  float: right;
-  height: 400px;
-  width: 116px;
+  margin: 10px auto;
+  height: 300px;
+  width: 87px;
   background-color: #4e4e4a;
-  -webkit-mask: url(/images/man.svg);
-  mask: url(/images/man.svg);
+  -webkit-mask: url(../images/man.svg);
+  mask: url(../images/man.svg);
 }
 
 .header-content {
@@ -127,29 +135,77 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
 }
 
 .header-content p {
-  text-align: left;
+  margin-top: 50px;
   line-height: 1.6;
-  margin-right: 130px;
-  padding: 60px 0 100px 110px;
 }
 
-main {
+.featured {
   margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-main h1 {
+.featured h1 {
+  font-family: "Abel", sans-serif;
+  font-weight: bold;
   color: #FCFC62;
   background-color: #343431;
   display: inline-block;
   padding: 10px;
 }
 
+.work {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work img {
+  flex: 1;
+  transition: 0.3s ease all;
+}
+
+.work img:hover {
+  position: relative;
+  z-index: 2;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.75);
+}
+
 .about {
   background-color: #343431;
+  color: #EFF2ED;
+  font-weight: 300;
+}
+
+.about h1 {
+  font-family: "Abel", sans-serif;
+  font-weight: bold;
+  color: #343431;
+  background-color: #FCFC62;
+  display: inline-block;
+  padding: 10px;
+}
+
+.about span {
+  color: #FCFC62;
 }
 
 .headshot {
+  margin: 20px;
   border-radius: 100%;
-  max-width: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .vector-box {
+    float: right;
+    max-height: 350px;
+  }
+  .vector-me {
+    height: 400px;
+    width: 116px;
+    background-color: #4e4e4a;
+    -webkit-mask: url(../images/man.svg);
+    mask: url(../images/man.svg);
+  }
 }

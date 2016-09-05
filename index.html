@@ -10,7 +10,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Abel|Ubuntu+Condensed|Ubuntu:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
 
 </head>
 <body>
@@ -27,34 +27,62 @@
       </nav>
     </div>
 
-    <div class="header-content">
-      <a name="Home"></a>
-      <div class="vector-me"></div>
-      <h1>Hi, I'm <span>Jason.</span></h1>
-      <em>(not to be confused with JSON)</em>
-      <p>
-        As a <span>developer</span>, I want to harness the power of technology to improve people's lives. <br/>
-        As a <span>husband</span>, I want to always be supportive and there for my wife as she does for me. </br/>
-        As a <span>human</span>, I want to treat others with respect and kindness and to always lead with love.
-      </p>
+    <div class="header-content container">
+      <div class="row">
+        <div class="col-sm-10">
+          <a name="Home"></a>
+          <h1>Hi, I'm <span>Jason.</span></h1>
+          <em>(not to be confused with JSON)</em>
+          <p>
+            As a <span>developer</span>, I want to harness the power of technology to improve people's lives. <br/>
+            As a <span>husband</span>, I want to always be supportive and there for my wife as she does for me. </br/>
+            As a <span>human</span>, I want to treat others with respect and kindness and to always lead with love.
+          </p>
+        </div>
+        <div class="col-sm-2 vector-box">
+          <div class="vector-me"></div>
+        </div>
+      </div>
     </div>
   <a name="Work"></a>
   </header>
 
-  <main class="container">
+  <main class="container featured">
 
-    <h1>My Featured Work:</h1>
+    <h1>Featured Work:</h1>
     <div id="featured">
 
+    </div>
+
+    <h1>All Work:</h1>
+    <div class="work">
+      <img src="https://unsplash.it/250x250?random" />
+      <img src="https://unsplash.it/250x250?random" />
+      <img src="https://unsplash.it/250x250?random" />
+      <img src="https://unsplash.it/250x250?random" />
+      <img src="https://unsplash.it/250x250?random" />
+      <img src="https://unsplash.it/250x250?random" />
+      <img src="https://unsplash.it/250x250?random" />
+      <img src="https://unsplash.it/250x250?random" />
     </div>
   </main>
 
   <section class="about">
-    <img src="/images/me.png" class="headshot"/>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <h1>About Me:</h1>
+          <h4>I'm a <span>Front End Engineer</span> from Indianapolis, Indiana.</h4>
+        </div>
+        <div class="col-sm-3">
+          <img src="./images/me.png" class="headshot pull-right"/>
+        </div>
+      </div>
+    </div>
   </section>
 
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="/js/scrollto.min.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="./js/scrollto.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>

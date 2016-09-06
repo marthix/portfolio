@@ -1,14 +1,13 @@
 // Setup
 var knexConfig = require('./knexfile.js')
-var knexDatabase = require('knex')(knexConfig)
+var knex = require('knex')(knexConfig)
 var express = require('express')
 var app = express()
 
 
 // Routes
 app.get('/api/v1/portfolio', function(req, res){
-  console.log(req)
-  knexDatabase
+  knex
     .select()
     .from('portfolio')
     .then(function(data){

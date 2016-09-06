@@ -66,7 +66,28 @@ document.body.addEventListener('click', function(e){
 // Create work images for grid
 var work = document.getElementById('work')
 
-var portfolioImages = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png', '11.png', '12.png', '13.png', '14.png', '15.png', '16.png' , '17.png', '18.png', '19.png', '20.png', '21.png', '22.png']
+var portfolioImages = [['1.png', ''] 
+'2.png',
+'3.png',
+'4.png',
+'5.png',
+'6.png',
+'7.png',
+'8.png',
+'9.png',
+'10.png',
+'11.png',
+'12.png',
+'13.png',
+'14.png',
+'15.png',
+'16.png',
+'17.png',
+'18.png',
+'19.png',
+'20.png',
+'21.png',
+'22.png']
 
 portfolioImages.forEach(function(image){
   var imageId = image.slice(0, -4)

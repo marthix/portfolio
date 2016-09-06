@@ -1,41 +1,43 @@
-// Create work images for grid
-var work = document.getElementById('work')
 
 fetch('/api/v1/portfolio')
   .then(function(response){
-    console.log(response)
     return response.json()
   })
   .then(function(portfolioPieces){
-    console.log(portfolioPieces)
-  })
-//
-// portfolioImages.forEach(function(image){
-//   var imageId = image.slice(0, -4)
-//   var htmlImage = createImage('./images/work/' + image, imageId)
-//   work.appendChild(htmlImage)
-// })
+    // Create work images for grid
+    var work = document.getElementById('work')
+    var featured = document.getElementById('featured')
 
-function createImage(path, id) {
+    // Create each piece not featured and append to grid
+    portfolioPieces.forEach(function(piece){
+      if (!piece.featured) {
+        var imageId = piece.id
+        var htmlImage = createImage('./images/work/' + piece.filename, imageId, piece.title)
+        work.appendChild(htmlImage)
+      } else {
+        var imageId = piece.id
+        var htmlImage = createImage('./images/work/' + piece.filename, imageId, piece.title)
+        featured.appendChild(htmlImage)
+      }
+    })
+  })
+
+function createImage(path, id, caption) {
   var imageBox = document.createElement('div')
-  // imageBox.classList.add('col-sm-3')
 
   var imageLink = document.createElement('a')
-  imageLink.setAttribute('href', '/details?id=' + id)
+  imageLink.setAttribute('href', '/detail?id=' + id)
 
   var figure = document.createElement('figure')
 
   var image = document.createElement('img')
   image.setAttribute('src', path)
-  // image.setAttribute('height', '250')
-  // image.setAttribute('width', '100%')
-  image.setAttribute('alt', '')
-  image.classList.add('portfolio-image')
+  image.setAttribute('alt', caption)
 
   var figureCaption = document.createElement('figcaption')
 
   var title = document.createElement('p')
-  title.innerHTML = "Test Caption"
+  title.innerHTML = caption
 
   figureCaption.appendChild(title)
   figure.appendChild(image)
@@ -45,12 +47,3 @@ function createImage(path, id) {
 
   return imageBox
 }
-
-
-
-		// <a href="http://www.flickr.com/photos/anirudhkoul/3536413126/">
-		// 	<figure>
-		// 		<img src="images/arcdetriomphe_sm.png" height="180" width="320" alt="Arc de Triomphe">
-		// 		<figcaption><p>Arc de Triomphe</p></figcaption>
-		// 	</figure>
-		// </a>

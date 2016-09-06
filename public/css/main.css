@@ -8,6 +8,11 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: "Abel", sans-serif;
+}
+
 header {
   background-color: #343431;
   color: #EFF2ED;
@@ -24,7 +29,8 @@ a:focus {
   text-decoration: none;
 }
 
-.logo {
+.logo,
+.logo-small {
   margin: 12px;
   width: 35px;
   height: 50px;
@@ -218,6 +224,7 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
 
 .portfolio-grid figcaption p {
   display: table-cell;
+  padding: 10px;
   font-size: 1.5em;
   position: relative;
   top: -40px;
@@ -226,11 +233,6 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
   -moz-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
   vertical-align: middle;
-}
-
-.portfolio-image {
-  width: 100%;
-  height: 250px;
 }
 
 .about {
@@ -257,6 +259,48 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
   border-radius: 100%;
   max-width: 400px;
   box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+.detail-menu a, .detail-menu p {
+  display: block;
+  padding: 15px;
+  border-bottom: 1px dotted #343431;
+}
+
+.detail-menu i {
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.3s ease margin;
+}
+
+.detail-menu a {
+  color: #343431;
+  text-decoration: underline;
+}
+
+.detail-menu a:first-child {
+  border-top: 1px dotted #343431;
+}
+
+.detail-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #EFF2ED;
+}
+
+.detail-menu a:hover i {
+  color: #FCFC62;
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.detail-menu p i {
+  margin-right: 10px;
+}
+
+.detail-menu p span {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 @media (min-width: 768px) {

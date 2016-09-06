@@ -37,8 +37,8 @@ a:focus {
 
 .logo {
   margin: 12px;
-  width: 70px;
-  height: 100px;
+  width: 35px;
+  height: 50px;
   float: left;
   display: inline-block;
   background-color: $yellow;
@@ -156,7 +156,7 @@ nav {
   }
 }
 
-.featured {
+.portfolio {
   margin-top: 80px;
   margin-bottom: 80px;
 
@@ -170,22 +170,102 @@ nav {
   }
 }
 
-.work {
-  display: flex;
-  flex-wrap: wrap;
+.portfolio-grid {
+  margin: 1em auto;
+	max-width: 1300px;
+	text-align: center;
 
-  img {
-    flex: 1;
-    transition: 0.3s ease all;
+  div {
+  	border: 5px solid $gray;
+  	display: inline-block;
+  	margin: 0.3em;
+  	width: 280px;
 
     &:hover {
-      position: relative;
-      z-index: 2;
-      transform: scale(1.02);
-      box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
+
+      img {
+      	-webkit-transform: scale(1.2);
+      	-moz-transform: scale(1.2);
+      	transform: scale(1.2);
+      }
+
+      figcaption {
+        opacity: 1;
+
+        p {
+          -moz-transform: translateY(40px);
+        	-webkit-transform: translateY(40px);
+        	transform: translateY(40px);
+        }
+      }
+    }
+  }
+
+  img {
+  	display: block;
+  	height: auto;
+  	max-width: 100%;
+    -webkit-transition: 0.3s ease all;
+  	-moz-transition: 0.3s ease all;
+  	transition: 0.3s ease all;
+  }
+
+  figure {
+  	height: 163px;
+  	overflow: hidden;
+  	position: relative;
+  }
+
+  figcaption {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    display: table;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    transition: all 300ms;
+    -webkit-transition-delay: 100ms;
+    -moz-transition-delay: 100ms;
+    transition-delay: 100ms;
+    z-index: 100;
+
+    p {
+      display: table-cell;
+    	font-size: 1.5em;
+    	position: relative;
+    	top: -40px;
+    	width: 280px;
+    	-webkit-transition: all 300ms ease-out;
+    	-moz-transition: all 300ms ease-out;
+    	transition: all 300ms ease-out;
+    	vertical-align: middle;
     }
   }
 }
+
+.portfolio-image {
+  width: 100%;
+  height: 250px;
+}
+
+// .portfolio-image {
+//   transition: 0.3s ease all;
+//   height: 250px;
+//   background-position: center;
+//   background-size: cover;
+//
+//   &:hover {
+//     position: relative;
+//     z-index: 2;
+//     transform: scale(1.02);
+//     box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.75);
+//   }
+// }
 
 .about {
   background-color: $gray;
@@ -216,6 +296,11 @@ nav {
 // MEDIA QUERIES
 
 @media (min-width: 768px) {
+  .logo {
+    width: 70px;
+    height: 100px;
+  }
+
   .vector-box {
     float: right;
     max-height: 350px;

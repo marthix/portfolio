@@ -7,6 +7,7 @@ var app = express()
 
 // Routes
 app.get('/api/v1/portfolio', function(req, res){
+  console.log(req)
   knexDatabase
     .select()
     .from('portfolio')

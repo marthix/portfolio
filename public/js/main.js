@@ -35,8 +35,6 @@ $(document).ready(function(){
   $(window).resize(function() {
     if ($(window).width() < 425) {
       changeLogoSize('35px', '50px')
-    } else {
-      changeLogoSize('70px', '100px')
     }
   })
 
@@ -66,9 +64,7 @@ document.body.addEventListener('click', function(e){
 // Create work images for grid
 var work = document.getElementById('work')
 
-var portfolioImages = [['1.png', ''] 
-'2.png',
-'3.png',
+var portfolioImages = ['1.png', '2.png', '3.png',
 '4.png',
 '5.png',
 '6.png',

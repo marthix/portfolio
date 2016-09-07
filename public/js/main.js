@@ -35,8 +35,6 @@ $(document).ready(function(){
   $(window).resize(function() {
     if ($(window).width() < 425) {
       changeLogoSize('35px', '50px')
-    } else {
-      changeLogoSize('70px', '100px')
     }
   })
 

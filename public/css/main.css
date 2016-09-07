@@ -239,6 +239,7 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
   background-color: #343431;
   color: #EFF2ED;
   font-weight: 300;
+  padding-bottom: 30px;
 }
 
 .about h1 {
@@ -254,10 +255,23 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
   color: #FCFC62;
 }
 
+.about a {
+  color: #EFF2ED;
+}
+
+.about a:hover {
+  color: #FCFC62;
+}
+
+.about i {
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
 .headshot {
-  margin: 20px;
+  margin: 20px auto;
   border-radius: 100%;
-  max-width: 400px;
+  max-width: 200px;
   box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.3);
 }
 
@@ -301,6 +315,13 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
   color: rgba(0, 0, 0, 0.3);
   font-weight: bold;
   margin-right: 10px;
+}
+
+footer {
+  background-color: #FCFC62;
+  color: #343431;
+  padding: 5px;
+  font-size: 13px;
 }
 
 @media (min-width: 768px) {

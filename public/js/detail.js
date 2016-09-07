@@ -4,6 +4,7 @@ fetch('api/v1/detail' + query)
   .then(function(response){
     return response.json()
   })
+
   .then(function(data){
     var work = data[0]
     var detailsPage = document.getElementById('details')
@@ -36,6 +37,21 @@ fetch('api/v1/detail' + query)
     var homeLinkText = document.createElement('span')
     homeLinkText.innerHTML = 'Return Home'
 
+    if (work.link != null) {
+      var launchLink = document.createElement('a')
+      launchLink.setAttribute('href', work.link)
+
+      var launchIcon = document.createElement('i')
+      launchIcon.classList.add('fa', 'fa-external-link', 'fa-lg')
+      launchIcon.setAttribute('aria-hidden', 'true')
+
+      var launchLinkText = document.createElement('span')
+      launchLinkText.innerHTML = 'Launch Project'
+
+      launchLink.appendChild(launchIcon)
+      launchLink.appendChild(launchLinkText)
+    }
+
     var githubLink = document.createElement('a')
     githubLink.setAttribute('href', work.github)
     githubLink.setAttribute('target', '_blank')
@@ -63,13 +79,16 @@ fetch('api/v1/detail' + query)
     toolsBox.appendChild(toolsText)
     toolsBox.appendChild(tools)
 
-    homeLink.appendChild(homeIcon)
-    homeLink.appendChild(homeLinkText)
-
     githubLink.appendChild(githubIcon)
     githubLink.appendChild(githubLinkText)
 
+    homeLink.appendChild(homeIcon)
+    homeLink.appendChild(homeLinkText)
+
     detailMenu.appendChild(homeLink)
+    if (work.link != null) {
+      detailMenu.appendChild(launchLink)
+    }
     detailMenu.appendChild(githubLink)
     detailMenu.appendChild(toolsBox)
 

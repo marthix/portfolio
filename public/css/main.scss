@@ -75,7 +75,6 @@ nav {
 
   li {
     display: inline;
-    // padding: 20px;
 
     a {
       color: $yellow;
@@ -259,6 +258,7 @@ nav {
   background-color: $gray;
   color: $white;
   font-weight: 300;
+  padding-bottom: 30px;
 
   h1 {
     font-family: $font-header;
@@ -272,17 +272,29 @@ nav {
   span {
     color: $yellow;
   }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  i {
+    margin-top: 15px;
+    margin-right: 5px;
+  }
 }
 
 .headshot {
-  margin: 20px;
+  margin: 20px auto;
   border-radius: 100%;
-  max-width: 400px;
+  max-width: 200px;
   box-shadow: 0 20px 20px -5px $shadow;
 }
 
 .detail-menu {
-
   a, p {
     display: block;
     padding: 15px;
@@ -326,6 +338,13 @@ nav {
       margin-right: 10px;
     }
   }
+}
+
+footer {
+  background-color: $yellow;
+  color: $gray;
+  padding: 5px;
+  font-size: 13px;
 }
 
 // MEDIA QUERIES

@@ -70,6 +70,7 @@ fetch('api/v1/detail' + query)
     toolsIcon.setAttribute('aria-hidden', 'true')
 
     var toolsText = document.createElement('span')
+    toolsText.classList.add('tools')
     toolsText.innerHTML = 'Tools'
 
     var tools = document.createElement('span')

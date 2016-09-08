@@ -311,7 +311,7 @@ nav li a:hover::before, nav li a:hover::after, nav li a:focus::before, nav li a:
   margin-right: 10px;
 }
 
-.detail-menu p span {
+.detail-menu p .tools {
   color: rgba(0, 0, 0, 0.3);
   font-weight: bold;
   margin-right: 10px;

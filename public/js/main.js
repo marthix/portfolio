@@ -46,17 +46,19 @@ $(document).ready(function(){
 
 // Custom scroll-to links
 document.body.addEventListener('click', function(e){
-  if (e.target.getAttribute('href').includes('#')) {
-    e.preventDefault()
-    var target = e.target.innerHTML
-    if (target === 'Home') {
-      $(window).scrollTo('[name="' + target + '"]', {
-        offset: -100
-      })
-    } else {
-      $(window).scrollTo('[name="' + target + '"]', {
-        offset: -60
-      })
+  if (e.target.getAttribute('href') !== null) {
+    if (e.target.getAttribute('href').includes('#')) {
+      e.preventDefault()
+      var target = e.target.innerHTML
+      if (target === 'Home') {
+        $(window).scrollTo('[name="' + target + '"]', {
+          offset: -100
+        })
+      } else {
+        $(window).scrollTo('[name="' + target + '"]', {
+          offset: -60
+        })
+      }
     }
   }
 })

@@ -124,10 +124,7 @@ nav {
 .vector-me {
   margin: 10px auto;
   height: 300px;
-  width: 87px;
-  background-color: lighten($gray, 10);
-  -webkit-mask: url(../images/man.svg);
-  mask: url(../images/man.svg);
+  width: 150px;
 }
 
 .header-content {
@@ -362,9 +359,6 @@ footer {
 
   .vector-me {
     height: 400px;
-    width: 116px;
-    background-color: lighten($gray, 10);
-    -webkit-mask: url(../images/man.svg);
-    mask: url(../images/man.svg);
+    width: 200px;
   }
 }

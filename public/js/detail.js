@@ -9,6 +9,8 @@ fetch('api/v1/detail' + query)
     var work = data[0]
     var detailsPage = document.getElementById('details')
 
+    console.log(work)
+
     var imageBox = document.createElement('div')
     imageBox.classList.add('col-sm-8')
 
@@ -21,6 +23,10 @@ fetch('api/v1/detail' + query)
     var title = document.createElement('h1')
     title.innerHTML = work.title
 
+    // TODO: Remove this once the db content is fully filled out.
+    if (work.blurb === null) {
+      work.blurb = '(Coming soon!)'
+    }
     var blurb = document.createElement('p')
     blurb.innerHTML = work.blurb
 
@@ -52,6 +58,9 @@ fetch('api/v1/detail' + query)
       launchLink.appendChild(launchLinkText)
     }
 
+    if (work.github === null) {
+      work.github = '#'
+    }
     var githubLink = document.createElement('a')
     githubLink.setAttribute('href', work.github)
     githubLink.setAttribute('target', '_blank')
@@ -73,6 +82,9 @@ fetch('api/v1/detail' + query)
     toolsText.classList.add('tools')
     toolsText.innerHTML = 'Tools'
 
+    if (work.tools === null) {
+      work.tools = '(Coming soon!)'
+    }
     var tools = document.createElement('span')
     tools.innerHTML = work.tools
 

@@ -58,52 +58,59 @@ fetch('api/v1/detail' + query)
       launchLink.appendChild(launchLinkText)
     }
 
-    if (work.github === null) {
-      work.github = '#'
+    if (work.github != null) {
+      var githubLink = document.createElement('a')
+      githubLink.setAttribute('href', work.github)
+      githubLink.setAttribute('target', '_blank')
+
+      var githubIcon = document.createElement('i')
+      githubIcon.classList.add('fa', 'fa-github', 'fa-lg')
+      githubIcon.setAttribute('aria-hidden', 'true')
+
+      var githubLinkText = document.createElement('span')
+      githubLinkText.innerHTML = 'View on GitHub'
+
+      githubLink.appendChild(githubIcon)
+      githubLink.appendChild(githubLinkText)
     }
-    var githubLink = document.createElement('a')
-    githubLink.setAttribute('href', work.github)
-    githubLink.setAttribute('target', '_blank')
 
-    var githubIcon = document.createElement('i')
-    githubIcon.classList.add('fa', 'fa-github', 'fa-lg')
-    githubIcon.setAttribute('aria-hidden', 'true')
 
-    var githubLinkText = document.createElement('span')
-    githubLinkText.innerHTML = 'View on GitHub'
 
-    var toolsBox = document.createElement('p')
+    if (work.tools != null) {
+      var toolsBox = document.createElement('p')
 
-    var toolsIcon = document.createElement('i')
-    toolsIcon.classList.add('fa', 'fa-wrench', 'fa-lg')
-    toolsIcon.setAttribute('aria-hidden', 'true')
+      var toolsIcon = document.createElement('i')
+      toolsIcon.classList.add('fa', 'fa-wrench', 'fa-lg')
+      toolsIcon.setAttribute('aria-hidden', 'true')
 
-    var toolsText = document.createElement('span')
-    toolsText.classList.add('tools')
-    toolsText.innerHTML = 'Tools'
+      var toolsText = document.createElement('span')
+      toolsText.classList.add('tools')
+      toolsText.innerHTML = 'Tools'
 
-    if (work.tools === null) {
-      work.tools = '(Coming soon!)'
+      var tools = document.createElement('span')
+      tools.innerHTML = work.tools
+
+      toolsBox.appendChild(toolsIcon)
+      toolsBox.appendChild(toolsText)
+      toolsBox.appendChild(tools)
     }
-    var tools = document.createElement('span')
-    tools.innerHTML = work.tools
-
-    toolsBox.appendChild(toolsIcon)
-    toolsBox.appendChild(toolsText)
-    toolsBox.appendChild(tools)
-
-    githubLink.appendChild(githubIcon)
-    githubLink.appendChild(githubLinkText)
 
     homeLink.appendChild(homeIcon)
     homeLink.appendChild(homeLinkText)
 
     detailMenu.appendChild(homeLink)
+
     if (work.link != null) {
       detailMenu.appendChild(launchLink)
     }
-    detailMenu.appendChild(githubLink)
-    detailMenu.appendChild(toolsBox)
+
+    if (work.github != null) {
+      detailMenu.appendChild(githubLink)
+    }
+
+    if (work.tools != null) {      
+      detailMenu.appendChild(toolsBox)
+    }
 
     imageBox.appendChild(image)
 

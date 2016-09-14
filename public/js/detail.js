@@ -46,6 +46,7 @@ fetch('api/v1/detail' + query)
     if (work.link != null) {
       var launchLink = document.createElement('a')
       launchLink.setAttribute('href', work.link)
+      launchLink.setAttribute('target', '_blank')
 
       var launchIcon = document.createElement('i')
       launchIcon.classList.add('fa', 'fa-external-link', 'fa-lg')
@@ -108,7 +109,7 @@ fetch('api/v1/detail' + query)
       detailMenu.appendChild(githubLink)
     }
 
-    if (work.tools != null) {      
+    if (work.tools != null) {
       detailMenu.appendChild(toolsBox)
     }
 
@@ -121,7 +122,3 @@ fetch('api/v1/detail' + query)
     detailsPage.appendChild(imageBox)
     detailsPage.appendChild(infoBox)
   })
-
-  //   <div class="detail-menu">
-  //     <p><i class="fa fa-wrench fa-lg" aria-hidden="true"></i><span>Tools</span>HTML, CSS, Phaser.io</p>
-  //   </div>

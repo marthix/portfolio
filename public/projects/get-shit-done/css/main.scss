@@ -1,0 +1,195 @@
+$red:              #F55A53;
+$pink:             #F0DADA;
+$black:            #494949;
+$gray:             #D1D1D1;
+$white:            #FAFAFA;
+$font:             'Helvetica', sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  color: $black;
+}
+
+.notifications {
+  display: block;
+  font-family: $font;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: right;
+  margin-bottom: 20px;
+
+  span {
+    color: $red;
+  }
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  line-height: 0.8;
+  font-weight: 900;
+  font-size: 90px;
+  font-family: $font;
+  transition: font-size 0.5s 0s ease;
+
+  span {
+    color: $red;
+  }
+}
+
+p {
+  text-align: center;
+  font-family: $font;
+  font-weight: bold;
+
+  span {
+    color: $red;
+  }
+}
+
+#todo-list {
+  padding: 0;
+  max-height: 470px;
+  // overflow: scroll;
+}
+
+.todo-items {
+  list-style: none;
+  font-weight: bold;
+  border-top: 1px solid $gray;
+  padding: 10px;
+  word-wrap: break-word;
+  display: flex;
+  transition: all 0.2s 0s ease;
+
+  &:first-child {
+    border-top: 2px solid $red;
+  }
+
+  &:last-child {
+    border-bottom: 2px solid $red;
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  color: $gray;
+  font-weight: normal;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.logo {
+}
+
+.logo-small {
+}
+
+.hide {
+  display: none;
+}
+
+
+//Form Input Animation
+#form-wrap {
+    position: relative;
+    height: 20px;
+    margin-bottom: 40px;
+}
+
+#search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+#label {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 20;
+}
+
+#label label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/plus.png") 0 0;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    color: rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+#input {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 230px;
+    height: 20px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+#input input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -230px;
+    width: 230px;
+    height: 100%;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: $black;
+    font-size: 18px;
+    border-radius: 0;
+}
+
+#input input:focus {
+    outline: none
+}
+
+#input.focus {
+    z-index: 20
+}
+
+#input.focus input {
+    left: 0;
+    transition: left 0.3s;
+}
+
+::-webkit-input-placeholder {
+   color: $red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $red;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $red;
+}
+
+:-ms-input-placeholder {
+   color: $red;
+}

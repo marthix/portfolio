@@ -1,0 +1,208 @@
+$white:          #ffffff;
+$black:          #0a111b;
+$darkblue:       #2d3b4e;
+$green:          #82e6c2;
+$pink:           #ec79fa;
+$purple:         #8292E6;
+$font-header:    'Monoton', cursive;
+$font:           'VT323', monospace;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $black;
+  font-family: $font;
+}
+
+nav {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: $font-header;
+  color: $green;
+  margin-bottom: 30px;
+
+  span {
+    color: $pink;
+  }
+}
+
+button {
+  outline: none;
+}
+
+.nav-button {
+  font-family: $font;
+  font-size: 18px;
+  width: 100%;
+  background-color: $purple;
+  color: $white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background: darken($purple, 30);
+  }
+}
+
+.default {
+  text-align: center;
+  h2 {
+    font-size: 16px;
+  }
+}
+
+.sparkle {
+  text-align: center;
+
+  h2 {
+    font-size: 24px;
+    margin: 0;
+
+    span {
+      color: $green;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin: 40px 0;
+  }
+
+  button {
+    background-color: $green;
+    color: $darkblue;
+    border: none;
+    padding: 16px 36px;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    box-shadow: 0 38px 32px -23px $black;
+
+    &:hover {
+      background: darken($green, 30);
+    }
+  }
+}
+
+.twenty-twenty {
+  text-align: center;
+
+  img {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.twentytwenty-container {
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+.oridomi {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0 auto;
+  }
+
+  img {
+    height: 230px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  button {
+    background-color: $green;
+    color: $darkblue;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    box-shadow: 0 38px 32px -23px $black;
+    display: block;
+    margin: 15px auto;
+    text-transform: uppercase;
+    font-size: 12px;
+    outline: none;
+
+    &:hover {
+      background: darken($green, 30);
+    }
+  }
+}
+
+.paper {
+
+}
+
+.plugin-window {
+  background-color: $darkblue;
+  color: $white;
+  height: 380px;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+// LAPTOP SCREENS
+@media screen and (min-width: 767px) {
+
+  .plugin-window {
+    height: 500px;
+  }
+
+  .default {
+    h2 {
+      font-size: 30px;
+      margin: 0px 20px 0px;
+    }
+  }
+
+  .sparkle {
+    h2 {
+      font-size: 40px;
+      margin: 0px 20px 0px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 20px 40px;
+    }
+  }
+
+  .oridomi {
+    img {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .twentytwenty-container {
+    width: 650px;
+    margin: 60px auto 0;
+  }
+}

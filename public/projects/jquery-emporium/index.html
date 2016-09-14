@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Marthix's Magic Plug-in Emporium</title>
+
+    <link href="https://fonts.googleapis.com/css?family=VT323|Monoton" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="col-xs-10 col-xs-offset-1 text-center hidden-xs">Marthix's <span>Magic</span> jQuery Emporium</h1>
+        <h1 class="col-xs-10 col-xs-offset-1 text-center visible-xs">M<span>M</span>JE</h1>
+      </div>
+
+      <nav class="row">
+        <div class="col-sm-2 col-sm-offset-3">
+          <button id="btn-sparkle" class="nav-button">Sparkle</button>
+        </div>
+        <div class="col-sm-2">
+          <button id="btn-twenty-twenty" class="nav-button">Twenty-Twenty</button>
+        </div>
+        <div class="col-sm-2">
+          <button id="btn-oridomi" class="nav-button">OriDomi</button>
+        </div>
+      </nav>
+
+      <main class="row">
+        <div class="col-xs-8 col-xs-offset-2 plugin-window default">
+          <div class="flexbox">
+            <h2>Click any of the buttons above to explore the store.</h2>
+          </div>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 plugin-window sparkle hidden">
+          <div class="flexbox" id=sparkle-box>
+            <h2 id=sparkle-header>Check out the <span id=sparkle-magic>MAGIC</span> of SPARKLE!</h2>
+            <p id=sparkle-text>Hover over any element in the window to see the effect.</p>
+            <button id=sparkle-button>Like rainbows? Hover me.</button>
+          </div>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 plugin-window twenty-twenty hidden">
+          <h2>Slide the slider around to reveal the images</h2>
+          <div id="box-2020" class="twentytwenty-container">
+            <img src="img/city2.jpg">
+            <img src="img/city3.jpg">
+          </div>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 plugin-window oridomi hidden">
+          <div class="flexbox">
+            <div class="flex-item">
+              <h2 id="oridomi-header">Accordion</h2>
+              <p>Click and drag the image below</p>
+              <button class="folded-button">New Random Fold</button>
+              <div class="paper">
+                <img src="img/city.jpg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="js/oridomi.min.js" type="text/javascript"></script>
+    <script src="js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <script src="js/jquery-canvas-sparkles.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>

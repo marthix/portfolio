@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html, h1 {
+  padding: 0;
+  margin: 0;
+}
+
+#experience {
+  width: 300px;
+  height: 250px;
+  background-size: cover;
+  background-position: left;
+  overflow: hidden;
+}
+
+#crowd {
+  position: absolute;
+  display: inline;
+}
+
+#scene1 {
+  background-color: #95c0e1;
+  color: #153b56;
+  width: 300px;
+  height: 250px;
+  text-align: center;
+  padding-left: 90px;
+  padding-top: 60px;
+}
+
+#scene1 h2 {
+  font-size: 20px;
+  color: white;
+}
+
+#scene1 span {
+  font-size: 12px;
+}
+
+#scene2 {
+  background-color: #2974a8;
+  width: 300px;
+  height: 260px;
+  text-align: center;
+  padding: 20px;
+}
+
+#scene2 img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+#scene2 button {
+  border: 3px solid #003a73;
+  background-color: white;
+  color: #da2127;
+  font-weight: bold;
+  outline: none;
+}
+
+#scene2 button:hover {
+  border: 3px solid #003a73;
+  background-color: #da2127;
+  color: white;
+}
+
+#scene2 button:active {
+  border: 3px solid #002d5a;
+  background-color: #c41e23;
+  color: #f2f2f2;
+}
+
+#ball {
+  width: 60px;
+  transform: rotate(110deg);
+}
+
+#foot {
+  width: 60px;
+}
+
+#goal {
+  width: 180px;
+  transform: skewY(15deg);
+}

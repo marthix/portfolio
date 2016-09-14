@@ -1,0 +1,181 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700';
+
+$white:          #ffffff;
+$lightteal:      #a1c8cc;
+$teal:           #45858c;
+$darkteal:       #14727a;
+$shadow:         rgba(0, 0, 0, 0.3);
+$fontstack:      'Open Sans', sans-serif;
+
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: $fontstack;
+  font-size: 12px;
+}
+
+h2 {
+  color: $darkteal;
+  font-size: 0.7rem;
+  margin: 25px 0 15px;
+}
+
+.row {
+  display: block;
+  height: 100%;
+}
+
+.headshot {
+  border-radius: 100%;
+  max-width: 50%;
+  box-shadow: 0 2px 4px $shadow;
+}
+
+.profile-container {
+  background: $darkteal;
+  color: $white;
+  text-align: center;
+  padding: 7%;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+
+    span {
+      font-weight: 100;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $lightteal;
+    margin-bottom: 0;
+  }
+}
+
+.contact-button {
+  width: 70%;
+  max-width: 250px;
+  padding: 3%;
+  border: 2px solid $white;
+  border-radius: 3px;
+  background-color: $darkteal;
+  color: $white;
+  font-weight: bold;
+  margin: auto;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background-color: $white;
+    color: $darkteal;
+  }
+
+  .fa-arrow-right {
+    margin-left: 10%;
+  }
+}
+
+.row-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.author {
+  span {
+    font-weight: 100;
+    font-size: 0.7rem;
+    color: $lightteal;
+  }
+}
+
+.resume {
+  padding: 7%;
+
+  h3 {
+    .fa-arrow-right {
+      margin-left: 5%;
+      color: $darkteal;
+    }
+  }
+}
+
+.list {
+	list-style: none;
+  padding: 0;
+
+  .list-item:before {
+    content:"\203A";
+    margin-right: 10px;
+    color: $darkteal;
+    font-weight: bold;
+  }
+}
+
+/*
+TABLET MEDIA QUERIES
+*/
+
+@media screen and (min-width: 554px) {
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 1;
+  }
+
+  .row-social {
+    margin-top: 150px;
+  }
+}
+
+/*
+LAPTOP MEDIA QUERIES
+*/
+@media screen and (min-width: 768px) {
+  .resume {
+    padding: 5%;
+  }
+
+  .profile-container {
+    padding: 5%;
+  }
+
+  .resume-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .resume-item-title {
+    flex: 1;
+    margin: 0;
+  }
+
+  .resume-item-content {
+    flex: 4;
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  .headshot {
+    max-width: 33%;
+  }
+}

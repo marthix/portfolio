@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Form Validation</title>
+  <meta name="description" content="A form validation library from The Iron Yard.">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="container">
+    <br /><br />
+
+    <form class="well" post="post" action="https://formspree.io/" id="contactForm">
+
+      <h2 class="text-center">Contact Information</h2>
+      <div id="msgInvalidForm" class="alert alert-danger hidden">
+        Invalid form values. Please review the form and correct problems.
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="name" name="name" required data-rules="minLength:2 required" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="email" name="email" required data-rules="email required" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="phone" name="phone" required data-rules="tel required" />
+      </div>
+
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <textarea class="form-control" id="comment" name="comment" data-rules="minLength:5"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/validate.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

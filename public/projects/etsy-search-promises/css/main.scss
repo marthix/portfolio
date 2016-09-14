@@ -1,0 +1,186 @@
+$blue:            #34a8c4;
+$green:           #78c042;
+$orange:          #F56400;
+$tan:             #f5f5f1;
+$white:           #ffffff;
+$gray:            #777777;
+$darkgray:        #222222;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  font-color: $darkgray;
+  font-size: 14px;
+  background-color: $tan;
+}
+
+header {
+  background-color: $white;
+}
+
+nav {
+  margin-top: -10px;
+}
+
+a {
+  color: $blue;
+  transition: 0.2s ease all;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  float: left;
+  width: 75px;
+  height: 100%;
+  margin: 22px 20px;
+}
+
+.search {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.search-bar {
+  height: 34px;
+  width: 300px;
+  margin-right: -5px;
+  padding: 6px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 1px solid lighten($gray, 30);
+  background-color: darken($white, 2);
+  font-size: 14px;
+  transition: 0.2s ease all;
+
+  &:hover {
+    border: 1px solid lighten($gray, 10);
+  }
+  &:focus {
+    background-color: $white;
+    border-color: $blue;
+    outline: none;
+  }
+}
+
+.search-btn {
+  height: 34px;
+  width: 70px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: 1px solid darken($blue, 5);
+  background-color: $blue;
+  color: $white;
+  font-weight: bold;
+  font-size: 13px;
+  vertical-align: top;
+  transition: 0.2s ease all;
+
+  &:hover {
+    background-color: lighten($blue, 5);
+  }
+}
+
+.login-nav {
+  padding: 25px;
+
+  a {
+    margin-right: 20px;
+  }
+
+  button {
+    height: 34px;
+    width: 60px;
+    border-radius: 3px;
+    border: 1px solid $blue;
+    background-color: $white;
+    color: $blue;
+    font-size: 13px;
+    margin-right: 20px;
+
+    &:hover {
+      background-color: lighten($blue, 47);
+      cursor: pointer;
+    }
+  }
+}
+
+.main-nav {
+  list-style: none;
+  width: 100%;
+  border-top: 1px solid lighten($gray, 30);
+  border-bottom: 1px solid lighten($gray, 30);
+
+  li {
+    display: inline-block;
+    color: $gray;
+    padding: 12px;
+    border-top: 3px solid $white;
+    border-bottom: 3px solid $white;
+    transition: 0.2s ease all;
+
+    &:hover {
+      color: $darkgray;
+      border-bottom: 3px solid $orange;
+    }
+  }
+}
+
+.tile-grid {
+
+}
+
+.tile {
+  display: inline-block;
+  margin: 1%;
+  width: 23%;
+  background-color: $white;
+  border: 1px solid lighten($gray, 30);
+  border-radius: 3px;
+  transition: 0.2s ease all;
+
+  &:hover {
+    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .tile-img {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .tile-title {
+    padding: 5px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tile-seller {
+    display: inline-block;
+    padding: 5px;
+    color: lighten($gray, 20);
+  }
+
+  .tile-price {
+    display: inline-block;
+    float: right;
+    padding: 5px;
+    color: $green;
+  }
+}

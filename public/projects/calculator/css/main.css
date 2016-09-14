@@ -1,0 +1,55 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url(../img/background.png);
+}
+
+form {
+  width: 300px;
+}
+
+.vertical-container {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.btn-num {
+  flex: 1;
+}
+
+.btn-opr {
+  flex: 1;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+#display {
+  text-align: right;
+  flex: 3;
+}
+
+#clearBtn,
+#equalBtn, {
+  flex: 1;
+}
+
+#calcBtn0 {
+  flex: 2;
+}

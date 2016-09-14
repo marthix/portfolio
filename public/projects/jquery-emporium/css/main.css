@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a111b;
+  font-family: "VT323", monospace;
+}
+
+nav {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: "Monoton", cursive;
+  color: #82e6c2;
+  margin-bottom: 30px;
+}
+
+h1 span {
+  color: #ec79fa;
+}
+
+button {
+  outline: none;
+}
+
+.nav-button {
+  font-family: "VT323", monospace;
+  font-size: 18px;
+  width: 100%;
+  background-color: #8292E6;
+  color: #ffffff;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.nav-button:hover {
+  background: #2339ad;
+}
+
+.default {
+  text-align: center;
+}
+
+.default h2 {
+  font-size: 16px;
+}
+
+.sparkle {
+  text-align: center;
+}
+
+.sparkle h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.sparkle h2 span {
+  color: #82e6c2;
+}
+
+.sparkle p {
+  font-size: 14px;
+  margin: 40px 0;
+}
+
+.sparkle button {
+  background-color: #82e6c2;
+  color: #2d3b4e;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+  box-shadow: 0 38px 32px -23px #0a111b;
+}
+
+.sparkle button:hover {
+  background: #23ad7b;
+}
+
+.twenty-twenty {
+  text-align: center;
+}
+
+.twenty-twenty img {
+  width: 100%;
+  margin: auto;
+}
+
+.twentytwenty-container {
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+.oridomi {
+  text-align: center;
+}
+
+.oridomi h2 {
+  margin-bottom: 0;
+}
+
+.oridomi p {
+  margin: 0 auto;
+}
+
+.oridomi img {
+  height: 230px;
+  display: block;
+  margin: 0 auto;
+}
+
+.oridomi button {
+  background-color: #82e6c2;
+  color: #2d3b4e;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+  box-shadow: 0 38px 32px -23px #0a111b;
+  display: block;
+  margin: 15px auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  outline: none;
+}
+
+.oridomi button:hover {
+  background: #23ad7b;
+}
+
+.plugin-window {
+  background-color: #2d3b4e;
+  color: #ffffff;
+  height: 380px;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .plugin-window {
+    height: 500px;
+  }
+  .default h2 {
+    font-size: 30px;
+    margin: 0px 20px 0px;
+  }
+  .sparkle h2 {
+    font-size: 40px;
+    margin: 0px 20px 0px;
+  }
+  .sparkle p {
+    font-size: 20px;
+    margin: 10px 20px 40px;
+  }
+  .oridomi img {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .twentytwenty-container {
+    width: 650px;
+    margin: 60px auto 0;
+  }
+}

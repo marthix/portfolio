@@ -1,0 +1,153 @@
+$blue:          #02426c;
+$darkBlue:      #01253d;
+$red:           #d54738;
+$white:         #fafafa;
+$gray:          #e6e6e6;
+$darkgray:      #414141;
+$black:         #131313;
+
+// FONT
+$mainFont:      'Quicksand', sans-serif;
+$headerFont:    'Pacifico', cursive;
+* {
+  box-sizing: border-box;
+  font-family: $mainFont;
+}
+body {
+  padding-top: 70px;
+}
+
+img {
+width:100%;
+}
+.pop {
+  background-color: $red;
+  &:hover{
+      transform: scale(1.01);
+  }
+}
+
+.no-pads {
+  padding: 0;
+}
+
+.nav {
+  background-color: $blue;
+  padding: 5px;
+
+}
+.navcon {
+  font-size: 18px;
+  padding: 0px;
+  color: $white;
+}
+// .cart-modal {
+//   background-color: $black;
+// }
+.cart-wrap {
+  width: 60%;
+}
+.modal-footer button {
+
+}
+.cart-item-holder {
+  position: relative;
+  max-width: 50%;
+}
+.cart-item-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: $gray;
+  color: $black;
+  font-family: $mainFont;
+
+}
+.cart-head {
+
+  color: $red;
+  font-family: $headerFont !important;
+    div {
+      padding: 0px;
+    }
+}
+
+.close {
+  color: $black;
+}
+
+.border {
+  // border-top: 1px $darkgray solid;
+  border-right: 1px $darkgray solid;
+}
+
+
+.modal-dialog {
+  font-family: $mainFont;
+}
+
+// .modal-header {
+//   border-bottom: 0px !important;
+// }
+
+.cart-item {
+
+  &:hover{
+    box-shadow: 0px 0px 30px $darkBlue;
+      transform: scale(1.01);
+      .cart-item-desc {
+            transform: scale(1.01);
+        }
+      }
+
+  }
+
+
+
+.btn-quick-add {
+ background-color: transparent;
+ border: 2px solid $red;
+ color: $red;
+ font-weight: bold;
+ padding: 3px 10px;
+ transition: 0.3s ease all;
+
+ &:hover {
+   background-color: rgba(213, 71, 56, 0.2);
+ }
+}
+.btn-cont {
+ background-color: transparent;
+ border: 2px solid $blue;
+ color: $blue;
+ font-weight: bold;
+ padding: 3px 10px;
+ transition: 0.3s ease all;
+ width: auto !important;
+
+ &:hover {
+   background-color: rgba(2, 66, 108, 0.2);
+ }
+}
+.carousel-control.left {
+  background-image: none !important;
+}
+.carousel-control.right {
+  background-image: none !important;
+}
+
+.logo-row {
+  margin-bottom: 10px;
+}
+
+.header-logo {
+  width: 200px;
+  transition: 0.5s ease all;
+  opacity: 100;
+}
+
+.add-class {
+  margin: 10px;
+}

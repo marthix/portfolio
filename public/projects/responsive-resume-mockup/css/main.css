@@ -1,0 +1,158 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700';
+html,
+body {
+  height: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+h2 {
+  color: #14727a;
+  font-size: 0.7rem;
+  margin: 25px 0 15px;
+}
+
+.row {
+  display: block;
+  height: 100%;
+}
+
+.headshot {
+  border-radius: 100%;
+  max-width: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profile-container {
+  background: #14727a;
+  color: #ffffff;
+  text-align: center;
+  padding: 7%;
+  display: flex;
+  align-items: center;
+}
+
+.profile-container h1 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.profile-container h1 span {
+  font-weight: 100;
+}
+
+.profile-container p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #a1c8cc;
+  margin-bottom: 0;
+}
+
+.contact-button {
+  width: 70%;
+  max-width: 250px;
+  padding: 3%;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  background-color: #14727a;
+  color: #ffffff;
+  font-weight: bold;
+  margin: auto;
+  transition: all 0.2s ease-out;
+}
+
+.contact-button:hover {
+  background-color: #ffffff;
+  color: #14727a;
+}
+
+.contact-button .fa-arrow-right {
+  margin-left: 10%;
+}
+
+.row-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.author span {
+  font-weight: 100;
+  font-size: 0.7rem;
+  color: #a1c8cc;
+}
+
+.resume {
+  padding: 7%;
+}
+
+.resume h3 .fa-arrow-right {
+  margin-left: 5%;
+  color: #14727a;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list .list-item:before {
+  content: "\203A";
+  margin-right: 10px;
+  color: #14727a;
+  font-weight: bold;
+}
+
+/*
+TABLET MEDIA QUERIES
+*/
+@media screen and (min-width: 554px) {
+  .row {
+    display: flex;
+  }
+  .column {
+    flex: 1;
+  }
+  .row-social {
+    margin-top: 150px;
+  }
+}
+
+/*
+LAPTOP MEDIA QUERIES
+*/
+@media screen and (min-width: 768px) {
+  .resume {
+    padding: 5%;
+  }
+  .profile-container {
+    padding: 5%;
+  }
+  .resume-item {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .resume-item-title {
+    flex: 1;
+    margin: 0;
+  }
+  .resume-item-content {
+    flex: 4;
+  }
+  .resume-item-content p {
+    margin: 0 0 20px;
+  }
+  .resume-item-content h3 {
+    margin-top: 0;
+  }
+  .headshot {
+    max-width: 33%;
+  }
+}

@@ -1,0 +1,317 @@
+/*
+--------------------------
+VARIABLES
+--------------------------
+*/
+
+//Color
+$blue:            rgb(16, 109, 179);
+$blueoverlay:     rgba(16, 109, 179, 0.8);
+$darkblue:        rgb(8, 52, 82);
+$gray:            rgb(163, 179, 191);
+$darkgray:        rgb(94, 104, 111);
+$white:           rgb(255, 255, 255);
+$shadow:          rgba(0, 0, 0, 0.3);
+
+//Fonts
+$font:          'Open Sans', sans-serif;
+$font-tight:    'Open Sans Condensed', sans-serif;
+
+
+
+/*
+--------------------------
+GLOBAL MODIFIERS
+--------------------------
+*/
+
+* {
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+
+
+
+/*
+--------------------------
+OVERRIDING CLASSES
+--------------------------
+*/
+
+
+
+
+/*
+--------------------------
+CUSTOM CSS CLASSES
+--------------------------
+*/
+
+.header {
+  background-color: $blue;
+  color: $white;
+  height: 300px;
+  padding-top: 10px;
+  background-image: linear-gradient($blueoverlay, $blueoverlay), url(https://unsplash.it/600/300/?image=1041);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+
+  h1 {
+    font-size: 50px;
+    margin: 50px 0 0;
+  }
+
+  p {
+    color: $darkblue;
+    line-height: 1;
+  }
+}
+
+.logo {
+  width: 35px;
+}
+
+.logo-text {
+  color: $darkblue;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.header-links {
+  list-style: none;
+  margin-top: 15px;
+  font-family: $font-tight;
+  font-weight: bold;
+  font-size: 14px;
+
+  li {
+    display: inline-block;
+    margin-left: 20px;
+
+    a {
+      color: $darkblue;
+    }
+  }
+
+  span {
+    font-size: 12px;
+  }
+}
+
+main {
+  margin-bottom: 60px;
+}
+
+.post {
+  line-height: 1.6;
+
+  h1 {
+    font-family: $font-tight;
+    font-size: 55px;
+    color: $darkblue;
+  }
+
+  blockquote {
+    font-size: 30px;
+    color: $blue;
+  }
+}
+
+.post-author {
+  vertical-align: middle;
+  color: $blue;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  img {
+    width: 20px;
+  }
+
+  .post-date {
+    font-weight: normal;
+    margin-left: 15px;
+  }
+}
+
+.post-links {
+  list-style: none;
+  padding: 0;
+
+  .post-link {
+    display: inline-block;
+    background-color: $gray;
+    padding-right: 5px;
+    margin-right: 2px;
+    width: 100%;
+    margin-bottom: 5px;
+
+    &.post-link-blue {
+      background-color: $blue;
+
+      .glyphicon {
+        background-color: $darkblue;
+      }
+    }
+
+    .glyphicon {
+      display: inline-block;
+      padding: 5px;
+      background-color: $darkgray;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.sidebar {
+  padding-top: 40px;
+
+  h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $font-tight;
+    color: $blue;
+  }
+}
+
+.profile-name {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: $blue;
+}
+
+.profile-image {
+  width: 80px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+
+  li {
+    display: inline-block;
+    margin-right: 5px;
+
+    a {
+      color: $gray;
+    }
+  }
+}
+
+.ad {
+  margin-bottom: 30px;
+
+  figcaption {
+    font-size: 12px;
+  }
+
+  img {
+    max-width: 200px;
+  }
+}
+
+footer {
+  border-top: 1px solid lighten($gray, 20);
+  margin-top: 40px;
+  background-color: $darkblue;
+}
+
+.bg-white {
+  background-color: $white;
+  padding: 40px 0;
+
+  h2 {
+    margin: 0;
+    font-family: $font-tight;
+    font-size: 55px;
+    color: $darkblue;
+  }
+}
+
+.footer-posts {
+  display: flex;
+  flex-direction: column;
+  background-color: $darkblue;
+}
+
+.footer-post {
+  padding: 140px 30px 30px 30px;
+  color: $darkblue;
+  flex: 1;
+  height: 200px;
+  background-image: url(https://unsplash.it/200?random);
+  background-size: cover;
+  opacity: 0.5;
+  transition: all 1s ease;
+
+  h6 {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    color: $white;
+    opacity: 1.0;
+  }
+}
+
+.footer-links {
+  color: $white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer-nav {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-left: -20px;
+  margin-top: 10px;
+
+  li {
+    display: inline-block;
+    margin-left: 20px;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+// Laptop
+@media screen and (min-width: 768px) {
+  .header {
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .post-links {
+    .post-link {
+      width: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  .footer-posts {
+    flex-direction: row;
+  }
+
+  .footer-links {
+    text-align: left;
+  }
+
+  .footer-nav {
+    text-align: right;
+    padding: auto;
+    margin: 0;
+  }
+}

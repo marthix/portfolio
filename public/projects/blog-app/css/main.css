@@ -1,0 +1,284 @@
+/*
+--------------------------
+VARIABLES
+--------------------------
+*/
+/*
+--------------------------
+GLOBAL MODIFIERS
+--------------------------
+*/
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*
+--------------------------
+OVERRIDING CLASSES
+--------------------------
+*/
+/*
+--------------------------
+CUSTOM CSS CLASSES
+--------------------------
+*/
+.header {
+  background-color: #106db3;
+  color: white;
+  height: 300px;
+  padding-top: 10px;
+  background-image: linear-gradient(rgba(16, 109, 179, 0.8), rgba(16, 109, 179, 0.8)), url(https://unsplash.it/600/300/?image=1041);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 50px;
+  margin: 50px 0 0;
+}
+
+.header p {
+  color: #083452;
+  line-height: 1;
+}
+
+.logo {
+  width: 35px;
+}
+
+.logo-text {
+  color: #083452;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.header-links {
+  list-style: none;
+  margin-top: 15px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.header-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.header-links li a {
+  color: #083452;
+}
+
+.header-links span {
+  font-size: 12px;
+}
+
+main {
+  margin-bottom: 60px;
+}
+
+.post {
+  line-height: 1.6;
+}
+
+.post h1 {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 55px;
+  color: #083452;
+}
+
+.post blockquote {
+  font-size: 30px;
+  color: #106db3;
+}
+
+.post-author {
+  vertical-align: middle;
+  color: #106db3;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.post-author img {
+  width: 20px;
+}
+
+.post-author .post-date {
+  font-weight: normal;
+  margin-left: 15px;
+}
+
+.post-links {
+  list-style: none;
+  padding: 0;
+}
+
+.post-links .post-link {
+  display: inline-block;
+  background-color: #a3b3bf;
+  padding-right: 5px;
+  margin-right: 2px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.post-links .post-link.post-link-blue {
+  background-color: #106db3;
+}
+
+.post-links .post-link.post-link-blue .glyphicon {
+  background-color: #083452;
+}
+
+.post-links .post-link .glyphicon {
+  display: inline-block;
+  padding: 5px;
+  background-color: #5e686f;
+}
+
+.post-links .post-link a {
+  color: white;
+}
+
+.sidebar {
+  padding-top: 40px;
+}
+
+.sidebar h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #106db3;
+}
+
+.profile-name {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #106db3;
+}
+
+.profile-image {
+  width: 80px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.social-links li a {
+  color: #a3b3bf;
+}
+
+.ad {
+  margin-bottom: 30px;
+}
+
+.ad figcaption {
+  font-size: 12px;
+}
+
+.ad img {
+  max-width: 200px;
+}
+
+footer {
+  border-top: 1px solid #dfe5e9;
+  margin-top: 40px;
+  background-color: #083452;
+}
+
+.bg-white {
+  background-color: white;
+  padding: 40px 0;
+}
+
+.bg-white h2 {
+  margin: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 55px;
+  color: #083452;
+}
+
+.footer-posts {
+  display: flex;
+  flex-direction: column;
+  background-color: #083452;
+}
+
+.footer-post {
+  padding: 140px 30px 30px 30px;
+  color: #083452;
+  flex: 1;
+  height: 200px;
+  background-image: url(https://unsplash.it/200?random);
+  background-size: cover;
+  opacity: 0.5;
+  transition: all 1s ease;
+}
+
+.footer-post h6 {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-post:hover {
+  color: white;
+  opacity: 1.0;
+}
+
+.footer-links {
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer-nav {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-left: -20px;
+  margin-top: 10px;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer-nav li a {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .header h1 {
+    font-size: 50px;
+  }
+  .post-links .post-link {
+    width: auto;
+    margin-bottom: auto;
+  }
+  .footer-posts {
+    flex-direction: row;
+  }
+  .footer-links {
+    text-align: left;
+  }
+  .footer-nav {
+    text-align: right;
+    padding: auto;
+    margin: 0;
+  }
+}

@@ -17,7 +17,7 @@ function preload() {
   game.load.audio('bubble-pop', 'assets/bubble_pop.ogg');
   game.load.image('sky', 'assets/sky.png')
   game.load.spritesheet('waters', 'assets/waters.png', 32, 400)
-  game.load.spritesheet('swimmer', 'assets/swimmer.png', 32, 32)
+  game.load.spritesheet('swimmer', 'assets/swimmer.PNG', 32, 32)
   game.load.spritesheet('stingray', 'assets/stingray.png', 72, 40)
   game.load.spritesheet('jellyfish', 'assets/jellyfish.png', 32, 32)
   game.load.spritesheet('death', 'assets/explosion.png', 64, 64)

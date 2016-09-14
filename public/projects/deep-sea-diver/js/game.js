@@ -209,7 +209,6 @@ function update() {
       //  Stand still
       player.animations.play('down')
     }
-    console.log(breath)
 }
 
 function render() {

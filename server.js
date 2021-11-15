@@ -1,7 +1,7 @@
 // Setup
+require('dotenv').config()
 var knexConfig = require('./knexfile.js')
 var knex = require('knex')(knexConfig)
-var ejs = require('ejs')
 var express = require('express')
 var app = express()
 

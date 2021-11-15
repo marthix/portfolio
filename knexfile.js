@@ -1,6 +1,8 @@
 module.exports = {
   client: 'pg',
-  connection: process.env.DATABASE_URL,
-  // connection: 'postgres://localhost/portfolio',
-  searchPath: 'knex,public'
+  connection: {
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+  },
+  searchPath: ['knex', 'public']
 }
